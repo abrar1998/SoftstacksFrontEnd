@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* Define a flexbox layout for the entire application */
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the app takes up at least the height of the viewport */
+  }
+  
+  /* Make the main content area flexible and grow to fill remaining space */
+  main {
+    flex: 1;
+  }
+  

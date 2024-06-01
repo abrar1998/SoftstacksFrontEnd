@@ -1,0 +1,26 @@
+.login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+.login-container .form-group {
+    margin-bottom: 1.5rem;
+}
+.login-container h3 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.login-container .btn {
+    width: 100%;
+}
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}

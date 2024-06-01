@@ -1,0 +1,32 @@
+<div class="container mt-5 mb-5">
+  <h1 class="text-center display-4 mb-5" style="color: #007bff;">Create User Account</h1>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form [formGroup]="regForm" (ngSubmit)="Register()" class="shadow p-5 bg-white rounded">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" required formControlName="email" placeholder="Enter your email">
+          <span *ngIf="regForm.controls['email'].touched && regForm.controls['email'].hasError('required')" class="text-danger">Enter Email</span>
+          <span *ngIf="regForm.controls['email'].touched && regForm.controls['email'].hasError('email')" class="text-danger">Invalid Email</span>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" required formControlName="password" placeholder="Enter your password">
+          <span *ngIf="regForm.controls['password'].touched && regForm.controls['password'].hasError('required')" class="text-danger">Enter Password</span>
+          <span *ngIf="regForm.controls['password'].touched && regForm.controls['password'].hasError('minlength')" class="text-danger">Password must be at least 6 characters long</span>
+        </div>
+        <div class="form-group">
+          <label for="role">Role</label>
+          <select class="form-control" required formControlName="roles">
+            <option value="">Select Role</option>
+            <option value="Admin">Admin</option>
+            <option value="Student">Student</option>
+            <option value="Teacher">Teacher</option>
+          </select>
+          <span *ngIf="regForm.controls['roles'].touched && regForm.controls['roles'].hasError('required')" class="text-danger">Select Role</span>
+        </div>
+        <button type="submit" class="btn btn-success btn-block mt-4" [disabled]="regForm.invalid">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
